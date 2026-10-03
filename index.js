@@ -1,6 +1,6 @@
 const canvas = document.getElementById("collageCanvas");
 const ctx = canvas.getContext("2d");
-
+ 
 const centerX = 300;
 const centerY = 300;
 const radius = 120;
