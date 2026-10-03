@@ -17,4 +17,6 @@ body {
   max-width: 100%;
   height: auto;
   aspect-ratio: 1 / 1;
+  touch-action: none; /* 캔버스 터치 시 화면 확대 및 스크롤 완벽 차단 */
 }
+
