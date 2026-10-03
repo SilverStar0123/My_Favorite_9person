@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>최애구절판</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <input type="file" id="imageInput" accept="image/*" style="display: none" />
+    <canvas
+      id="collageCanvas"
+      width="600"
+      height="600"
+      style="border: 1px solid black"
+    ></canvas>
+
+    <br /><br />
+
+    <!-- 색상 변경 영역 -->
+    <input type="color" id="lineColor" value="#000000" />
+    <button id="applyColorBtn">선 색상 확인</button>
+
+    <br /><br />
+
+    <!-- 저장 버튼 -->
+    <button id="saveBtn">이미지 저장하기</button>
+
+    <button id="deleteBtn">선택한 칸 지우기</button>
+    <button id="resetBtn">전체 지우기</button>
+
+    <!-- JS 파일은 무조건 body 끝나기 직전 맨 아래에 배치 -->
+    <script src="index.js"></script>
+  </body>
+</html>
