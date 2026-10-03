@@ -37,22 +37,14 @@ function definePath(index) {
     const startAngle = ((index - 1) * Math.PI) / 4 - Math.PI / 8;
     const endAngle = (index * Math.PI) / 4 - Math.PI / 8;
 
-    const p1X = centerX + radius * Math.cos(startAngle);
-    const p1Y = centerY + radius * Math.sin(startAngle);
-    const p2X = centerX + 500 * Math.cos(startAngle);
-    const p2Y = centerY + 500 * Math.sin(startAngle);
-    const p3X = centerX + 500 * Math.cos(endAngle);
-    const p3Y = centerY + 500 * Math.sin(endAngle);
-    const p4X = centerX + radius * Math.cos(endAngle);
-    const p4Y = centerY + radius * Math.sin(endAngle);
-
-    ctx.moveTo(p1X, p1Y);
-    ctx.lineTo(p2X, p2Y);
-    ctx.lineTo(p3X, p3Y);
-    ctx.lineTo(p4X, p4Y);
+    ctx.moveTo(centerX + radius * Math.cos(startAngle), centerY + radius * Math.sin(startAngle));
+    ctx.lineTo(centerX + 800 * Math.cos(startAngle), centerY + 800 * Math.sin(startAngle));
+    ctx.arc(centerX, centerY, 800, startAngle, endAngle); // 둥근 호로 외곽선 커버
+    ctx.lineTo(centerX + radius * Math.cos(endAngle), centerY + radius * Math.sin(endAngle));
   }
   ctx.closePath();
 }
+
 
 function drawLines() {
   definePath(0);
