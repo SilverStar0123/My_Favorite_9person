@@ -154,7 +154,10 @@ canvas.addEventListener("mousemove", (e) => {
 canvas.addEventListener("mouseup", (e) => {
   isDragging = false;
   const pos = getPos(e);
-  if (Math.abs(pos.x - clickStartX) < 5 && Math.abs(pos.y - clickStartY) < 5) {
+  if (
+    Math.abs(pos.x - clickStartX) < 20 &&
+    Math.abs(pos.y - clickStartY) < 20
+  ) {
     selectedIndex = getIndexFromEvent(pos.x, pos.y);
     document.getElementById("imageInput").click();
   }
@@ -226,8 +229,8 @@ canvas.addEventListener("touchend", (e) => {
   if (e.changedTouches.length === 1) {
     const pos = getPos(e);
     if (
-      Math.abs(pos.x - clickStartX) < 5 &&
-      Math.abs(pos.y - clickStartY) < 5
+      Math.abs(pos.x - clickStartX) < 20 &&
+      Math.abs(pos.y - clickStartY) < 20
     ) {
       selectedIndex = getIndexFromEvent(pos.x, pos.y);
       document.getElementById("imageInput").click();
