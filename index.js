@@ -225,6 +225,7 @@ canvas.addEventListener(
 );
 
 canvas.addEventListener("touchend", (e) => {
+  e.preventDefault(); // 기본 동작(마우스 이벤트 연속 실행) 차단
   isDragging = false;
   if (e.changedTouches.length === 1) {
     const pos = getPos(e);
